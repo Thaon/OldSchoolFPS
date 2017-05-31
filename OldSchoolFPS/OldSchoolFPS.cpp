@@ -10,6 +10,7 @@
 #include "TimedMessage.h"
 #include "Camera.h"
 
+
 //init variables
 std::vector<GameObject*> scene;
 bool g_key[256];
@@ -756,6 +757,20 @@ int main(int argc, char **argv) {
 			newObj->SetBehaviour(new TriggerBehaviour());
 			newObj->GetBehaviour()->m_messageToShow = tileData[4];
 			scene.push_back(newObj);
+		}
+
+		//load gun
+		if (!textureHasBeenLoaded)
+		{
+			GLuint tex_2d = SOIL_load_OGL_texture("res/w10.png", SOIL_LOAD_AUTO, SOIL_CREATE_NEW_ID, SOIL_FLAG_MULTIPLY_ALPHA);
+
+			loadedTextures.push_back(tileData[0]);
+			textureIndeces.push_back(tex_2d);
+			g_camera.m_gun.texture = textureIndeces.size();
+		}
+		else //we assign the texture that was loaded using its name
+		{
+			g_camera.m_gun.texture = textureIndeces.at(loadedTextureID);
 		}
 	}
 

@@ -1,4 +1,20 @@
-﻿  OldSchoolFPS.cpp
+﻿  Behaviour.cpp
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(55): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(56): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(57): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(58): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Generating Code...
+  Compiling...
+  Scene.cpp
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(55): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(56): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(57): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(58): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  OldSchoolFPS.cpp
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(55): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(56): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(57): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(58): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\cubebehaviour.h(44): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\cubebehaviour.h(45): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\cubebehaviour.h(46): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
@@ -30,29 +46,36 @@ c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\billboardbeha
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\timedmessage.h(13): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\timedmessage.h(30): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\timedmessage.h(32): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(23): warning C4305: 'initializing': truncation from 'double' to 'float'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(64): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(152): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(232): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(240): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(212): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(24): warning C4305: 'initializing': truncation from 'double' to 'float'
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(65): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(153): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(233): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(241): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(213): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(225): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(226): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(316): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(317): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(330): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(331): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(344): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(345): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(358): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(359): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(372): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(373): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(390): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(391): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(392): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(393): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(725): warning C4267: '=': conversion from 'size_t' to 'GLuint', possible loss of data
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(744): warning C4267: '=': conversion from 'size_t' to 'GLuint', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(726): warning C4267: '=': conversion from 'size_t' to 'GLuint', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(745): warning C4267: '=': conversion from 'size_t' to 'GLuint', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(769): warning C4267: '=': conversion from 'size_t' to 'GLuint', possible loss of data
+  GameObject.cpp
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(55): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(56): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(57): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\fpsgunbehaviour.h(58): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+  Generating Code...
   OldSchoolFPS.vcxproj -> C:\Users\gabri\OneDrive\Documents\GitHub\OldSchoolFPS\x64\Debug\OldSchoolFPS.exe

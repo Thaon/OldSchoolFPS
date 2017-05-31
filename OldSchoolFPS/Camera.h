@@ -2,6 +2,7 @@
 #define __CAMERA_H__
 
 #include "Common.h"
+#include "FPSGunBehaviour.h"
 
 class Camera
 {
@@ -35,6 +36,7 @@ public:
 	int mouseX, mouseY;
 
 	//glm::vec3 tempFrontVec = m_forward;
+	FPSGunBehaviour m_gun;
 
 	//Getter/Setter for m_pos
 	void SetPos(glm::vec3& newPos) { m_pos = newPos; }
@@ -86,6 +88,7 @@ public:
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
 		gluLookAt(m_pos.x, m_pos.y, m_pos.z, m_pos.x + m_forward.x, m_pos.y + m_forward.y, m_pos.z + m_forward.z, m_up.x, m_up.y, m_up.z);
+		m_gun.Draw(m_pos + m_forward);
 	}
 
 	void Pitch(float angle)//Calculate the camera pitch when mouse moves.
