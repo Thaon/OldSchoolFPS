@@ -26,7 +26,7 @@ public:
 			glutSolidCube(size / 2);
 			if (m_message == NULL)
 			{
-				m_message  = new TimedMessage("Surprise Motherfucer!", font, 800, 600, 2);
+				m_message  = new TimedMessage((char*)m_messageToShow.c_str(), font, 800, 600, 2);
 				m_isActive = false;
 			}
 		}

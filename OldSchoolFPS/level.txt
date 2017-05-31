@@ -1,5 +1,5 @@
 p,0,2,0;
-t,0,2,1;
+t,0,2,1,Hello I'm the message of this trigger!;
 f0,0,0,-1;
 f0,1,0,-1;
 f0,2,0,-1;

@@ -33,25 +33,26 @@ c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\timedmessage.
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(23): warning C4305: 'initializing': truncation from 'double' to 'float'
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(64): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(152): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(236): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(232): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(240): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(212): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
 c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(225): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(312): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(316): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(326): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(330): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(340): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(344): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(354): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(358): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(368): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(372): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(386): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(390): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(388): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(392): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\stdio.h(1769): note: see declaration of 'sprintf'
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(721): warning C4267: '=': conversion from 'size_t' to 'GLuint', possible loss of data
-c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(740): warning C4267: '=': conversion from 'size_t' to 'GLuint', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(725): warning C4267: '=': conversion from 'size_t' to 'GLuint', possible loss of data
+c:\users\gabri\onedrive\documents\github\oldschoolfps\oldschoolfps\oldschoolfps.cpp(744): warning C4267: '=': conversion from 'size_t' to 'GLuint', possible loss of data
   OldSchoolFPS.vcxproj -> C:\Users\gabri\OneDrive\Documents\GitHub\OldSchoolFPS\x64\Debug\OldSchoolFPS.exe

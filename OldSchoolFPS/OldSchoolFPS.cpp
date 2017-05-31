@@ -227,6 +227,10 @@ void renderScene(void) {
 	renderBitmapString(30, 75, 0, font, (char*)std::to_string(time/1000).c_str());
 	
 	renderBitmapString(30, 45, 0, font, s2);
+
+	//crosshair...lol
+	renderBitmapString(WIDTH/2, HEIGHT/2, 0, font, (char*)".");
+
 	
 	//update all objects
 	for (auto go : scene)
@@ -750,6 +754,7 @@ int main(int argc, char **argv) {
 		else if (tileData[0][0] == 't') //TRIGGER SPHERE
 		{
 			newObj->SetBehaviour(new TriggerBehaviour());
+			newObj->GetBehaviour()->m_messageToShow = tileData[4];
 			scene.push_back(newObj);
 		}
 	}

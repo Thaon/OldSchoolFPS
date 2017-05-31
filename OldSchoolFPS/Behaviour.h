@@ -15,6 +15,8 @@ public:
 
 	GLuint texture = NULL;
 
+	std::string m_messageToShow; //just for triggers!
+
 	virtual void Start() {};
 	virtual void Update(float deltaTime, Camera* cam) {};
 	virtual void Draw() {};
