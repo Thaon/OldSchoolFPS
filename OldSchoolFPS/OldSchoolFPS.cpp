@@ -7,12 +7,15 @@
 #include "CubeBehaviour.h"
 #include "BillboardBehaviour.h"
 #include "TriggerBehaviour.h"
+#include "TimedMessage.h"
 #include "Camera.h"
 
 //init variables
 std::vector<GameObject*> scene;
 bool g_key[256];
 Camera g_camera;
+int WIDTH = 800;
+int HEIGHT = 600;
 
 const float g_gravity = 0.5;
 
@@ -171,15 +174,6 @@ void renderScene(void) {
 		}
 	}
 
-	//update all objects
-	for (auto go : scene)
-	{
-		if (go->GetBehaviour() != NULL)
-		{
-			go->GetBehaviour()->Update(1 / (frame*1000.0 / (time - timebase)), &g_camera);
-		}
-	}
-
 	// Draw all models
 	for (auto go : scene)
 	{
@@ -228,17 +222,22 @@ void renderScene(void) {
 	renderBitmapString(30, 15, 0, font, (char *)"Old School FPS Engine");
 	renderBitmapString(30, 30, 0, font, s);
 	char s2[60];
-	sprintf(s2, "Coll: " + dynamicsworld->getNumCollisionObjects());
+	sprintf(s2, ("Colliders: " + std::to_string(dynamicsworld->getNumCollisionObjects())).c_str());
 	
+	renderBitmapString(30, 75, 0, font, (char*)std::to_string(time/1000).c_str());
 	
 	renderBitmapString(30, 45, 0, font, s2);
-	/*renderBitmapString(30, 45, 0, font, (char *)"F1 - Game Mode  640x480 32 bits");
-	renderBitmapString(30, 75, 0, font, (char *)"F3 - Game Mode 1024x768 32 bits");
-	renderBitmapString(30, 90, 0, font, (char *)"F4 - Game Mode 1280x1024 32 bits");
-	renderBitmapString(30, 105, 0, font, (char *)"F5 - Game Mode 1920x1200 32 bits");
-	renderBitmapString(30, 120, 0, font, (char *)"F6 - Window Mode");
-	renderBitmapString(30, 135, 0, font, (char *)"Esc - Quit");
-	renderBitmapString(30, 150, 0, font, currentMode);*/
+	
+	//update all objects
+	for (auto go : scene)
+	{
+		if (go->GetBehaviour() != NULL)
+		{
+			go->GetBehaviour()->Update(1 / (frame*1000.0 / (time - timebase)), &g_camera);
+		}
+	}
+
+
 	glPopMatrix();
 
 	restorePerspectiveProjection();
@@ -590,6 +589,7 @@ void init() {
 	glutTimerFunc(1, Timer, 0);
 
 	//createGLUTMenus();
+	glutSetCursor(GLUT_CURSOR_NONE);
 
 	// OpenGL init
 	glEnable(GL_DEPTH_TEST);
@@ -638,7 +638,7 @@ int main(int argc, char **argv) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowPosition(100, 100);
-	glutInitWindowSize(800, 600);
+	glutInitWindowSize(WIDTH, HEIGHT);
 	glutCreateWindow("Old School FPS Engine v0.1");
 
 	//load level file
