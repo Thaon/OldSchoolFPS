@@ -15,6 +15,13 @@ public:
 		Parent->InitPhysics(DYNAMIC);
 	}
 
+	virtual void InteractedByPlayer(Camera* cam)
+	{
+		glm::vec3 dir = glm::normalize(Parent->GetTransform().pos - cam->GetPos());
+		btVector3 btdir(dir.x, dir.y, dir.z);
+		Parent->Rigidbody->applyCentralForce(btdir * 60);
+	}
+
 	virtual void Draw()
 	{
 		glColor3f(1.0f, 1.0f, 1.0f);

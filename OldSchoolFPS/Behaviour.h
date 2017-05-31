@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Common.h"
+#include "Camera.h"
 
 class GameObject;
 
@@ -17,5 +18,6 @@ public:
 	virtual void Start() {};
 	virtual void Update() {};
 	virtual void Draw() {};
+	virtual void InteractedByPlayer(Camera* cam) {};
 };
 

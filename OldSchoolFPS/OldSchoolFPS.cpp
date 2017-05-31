@@ -10,8 +10,8 @@
 
 //init variables
 std::vector<GameObject*> scene;
-Camera g_camera;
 bool g_key[256];
+Camera g_camera;
 
 const float g_gravity = 0.5;
 
@@ -219,6 +219,8 @@ void renderScene(void) {
 	renderBitmapString(30, 30, 0, font, s);
 	char s2[60];
 	sprintf(s2, "Coll: " + dynamicsworld->getNumCollisionObjects());
+	
+	
 	renderBitmapString(30, 45, 0, font, s2);
 	/*renderBitmapString(30, 45, 0, font, (char *)"F1 - Game Mode  640x480 32 bits");
 	renderBitmapString(30, 75, 0, font, (char *)"F3 - Game Mode 1024x768 32 bits");
@@ -415,6 +417,52 @@ void releaseNormalKey(unsigned char key, int x, int y)
 }
 
 // -----------------------------------
+//             MENU
+// -----------------------------------
+
+void processMenuEvents(int option) {
+
+	/*switch (option) {
+	case 1:
+		red = 1.0f;
+		green = 0.0f;
+		blue = 0.0f; break;
+	case 2:
+		red = 0.0f;
+		green = 1.0f;
+		blue = 0.0f; break;
+	case 3:
+		red = 0.0f;
+		green = 0.0f;
+		blue = 1.0f; break;
+	case 4:
+		red = 1.0f;
+		green = 0.5f;
+		blue = 0.5f; break;
+	}*/
+}
+
+void createGLUTMenus() {
+
+	int menu;
+
+	// create the menu and
+	// tell glut that "processMenuEvents" will
+	// handle the events
+	menu = glutCreateMenu(processMenuEvents);
+
+	//add entries to our menu
+	
+	//glutAddMenuEntry("No Hit", 1);
+	//glutAddMenuEntry("Blue", 2);
+	//glutAddMenuEntry("Green", 3);
+	//glutAddMenuEntry("Orange", 4);
+
+	// attach the menu to the right button
+	glutAttachMenu(GLUT_RIGHT_BUTTON);
+}
+
+// -----------------------------------
 //             MOUSE
 // -----------------------------------
 
@@ -481,6 +529,31 @@ void mouseButton(int button, int state, int x, int y) {
 		}
 		else {// state = GLUT_DOWN
 			//xOrigin = x;
+			btVector3 btFrom(g_camera.GetPos().x, g_camera.GetPos().y, g_camera.GetPos().z);
+			btVector3 btTo(g_camera.Forward().x, g_camera.Forward().y, g_camera.Forward().z);
+
+			btCollisionWorld::AllHitsRayResultCallback res(btFrom, btTo);
+			dynamicsworld->rayTest(btFrom, btTo * 500, res); // m_btWorld is btDiscreteDynamicsWorld
+
+			if (res.hasHit()) {
+				for (int i = 0; i < res.m_collisionObjects.size(); i++)
+				{
+					btCollisionObject* body = (btCollisionObject*)res.m_collisionObjects[i]->getCollisionShape();
+
+					for (auto obj : scene)
+					{
+						if (obj->Rigidbody->getUserPointer() == body->getUserPointer())
+						{
+							obj->GetBehaviour()->InteractedByPlayer(&g_camera);
+						}
+					}
+				}
+				//str = "Collision at: " + std::to_string(res.m_hitPointWorld.getX()) + ", " + std::to_string(res.m_hitPointWorld.getY()) + ", " + std::to_string(res.m_hitPointWorld.getZ());
+			}
+			//std::string str = "";
+			//char* txt;
+
+			//txt = (char*)str.c_str();
 		}
 	}
 }
@@ -502,6 +575,8 @@ void init() {
 	glutPassiveMotionFunc(mouseMove);
 
 	glutTimerFunc(1, Timer, 0);
+
+	//createGLUTMenus();
 
 	// OpenGL init
 	glEnable(GL_DEPTH_TEST);

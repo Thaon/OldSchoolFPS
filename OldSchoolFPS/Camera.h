@@ -106,6 +106,8 @@ public:
 		m_up = glm::vec3(glm::normalize(rotation * glm::vec4(m_up, 0.0)));
 	}
 
+	glm::vec3 Forward() { return m_forward; }
+
 	btCollisionShape* Collider = NULL;
 	btRigidBody* Rigidbody = NULL;
 

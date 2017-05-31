@@ -36,4 +36,7 @@ void GameObject::InitPhysics(int type)
 		Rigidbody = new btRigidBody(dynamicRigidBodyCI);
 		Rigidbody->setActivationState(DISABLE_DEACTIVATION);
 	}
+
+	//to trigger collisions later on
+	Collider->setUserPointer((void*)Rigidbody);
 }
