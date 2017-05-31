@@ -6,6 +6,7 @@
 #include "SnowmanBehaviour.h"
 #include "CubeBehaviour.h"
 #include "BillboardBehaviour.h"
+#include "TriggerBehaviour.h"
 #include "Camera.h"
 
 //init variables
@@ -37,7 +38,7 @@ void *font = GLUT_STROKE_ROMAN;
 int h, w;
 
 // variables to compute frames per second
-int frame;
+int frame = 1;
 long time, timebase;
 char s[60];
 char currentMode[80];
@@ -170,6 +171,15 @@ void renderScene(void) {
 		}
 	}
 
+	//update all objects
+	for (auto go : scene)
+	{
+		if (go->GetBehaviour() != NULL)
+		{
+			go->GetBehaviour()->Update(1 / (frame*1000.0 / (time - timebase)), &g_camera);
+		}
+	}
+
 	// Draw all models
 	for (auto go : scene)
 	{
@@ -257,17 +267,19 @@ bool canJump = true;
 void Timer(int value)
 {
 	glm::vec3 amount;
+	float actualSpeed = g_translation_speed; // *(1 / (frame*1000.0 / (time - timebase))); //Time.deltaTime...
+
 	if (g_key['w'] || g_key['W']) {
-		amount.z = g_translation_speed;
+		amount.z = actualSpeed;
 	}
 	if (g_key['s'] || g_key['S']) {
-		amount.z = -g_translation_speed;
+		amount.z = -actualSpeed;
 	}
 	if (g_key['a'] || g_key['A']) {
-		amount.x = g_translation_speed;
+		amount.x = actualSpeed;
 	}
 	if (g_key['d'] || g_key['D']) {
-		amount.x = -g_translation_speed;
+		amount.x = -actualSpeed;
 	}
 	if (g_key[' '] && canJump)
 	{
@@ -542,10 +554,11 @@ void mouseButton(int button, int state, int x, int y) {
 
 					for (auto obj : scene)
 					{
-						if (obj->Rigidbody->getUserPointer() == body->getUserPointer())
-						{
-							obj->GetBehaviour()->InteractedByPlayer(&g_camera);
-						}
+						if (obj->Rigidbody != NULL)
+							if (obj->Rigidbody->getUserPointer() == body->getUserPointer())
+							{
+								obj->GetBehaviour()->InteractedByPlayer(&g_camera);
+							}
 					}
 				}
 				//str = "Collision at: " + std::to_string(res.m_hitPointWorld.getX()) + ", " + std::to_string(res.m_hitPointWorld.getY()) + ", " + std::to_string(res.m_hitPointWorld.getZ());
@@ -626,7 +639,7 @@ int main(int argc, char **argv) {
 	glutInitDisplayMode(GLUT_DEPTH | GLUT_DOUBLE | GLUT_RGBA);
 	glutInitWindowPosition(100, 100);
 	glutInitWindowSize(800, 600);
-	glutCreateWindow("Lighthouse3D - GLUT Tutorial");
+	glutCreateWindow("Old School FPS Engine v0.1");
 
 	//load level file
 	std::string level = "";
@@ -690,7 +703,7 @@ int main(int argc, char **argv) {
 			g_camera.SetPos(glm::vec3(std::stof(tileData[1]) * 4, std::stof(tileData[2]) * 4, std::stof(tileData[3]) * 4));
 		}
 
-		else if (tileData[0][0] == 'f')
+		else if (tileData[0][0] == 'f') //FLOOR
 		{
 			//if we haven't loaded the textures yet, we do it now
 			if (!textureHasBeenLoaded)
@@ -715,7 +728,7 @@ int main(int argc, char **argv) {
 			scene.push_back(newObj);
 		}
 
-		else if (tileData[0][0] == 'b')
+		else if (tileData[0][0] == 'b') //BILLBOARD
 		{
 			//if we haven't loaded the textures yet, we do it now
 			if (!textureHasBeenLoaded)
@@ -731,6 +744,12 @@ int main(int argc, char **argv) {
 				newObj->textureID = textureIndeces.at(loadedTextureID);
 			}
 			newObj->SetBehaviour(new BillboardBehaviour());
+			scene.push_back(newObj);
+		}
+
+		else if (tileData[0][0] == 't') //TRIGGER SPHERE
+		{
+			newObj->SetBehaviour(new TriggerBehaviour());
 			scene.push_back(newObj);
 		}
 	}

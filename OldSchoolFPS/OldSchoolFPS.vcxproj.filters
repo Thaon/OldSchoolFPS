@@ -51,6 +51,9 @@
     <ClInclude Include="Behaviour.h">
       <Filter>Header Files\Behaviours</Filter>
     </ClInclude>
+    <ClInclude Include="TriggerBehaviour.h">
+      <Filter>Header Files\Behaviours</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

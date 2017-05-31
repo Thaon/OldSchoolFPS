@@ -16,7 +16,7 @@ public:
 	GLuint texture = NULL;
 
 	virtual void Start() {};
-	virtual void Update() {};
+	virtual void Update(float deltaTime, Camera* cam) {};
 	virtual void Draw() {};
 	virtual void InteractedByPlayer(Camera* cam) {};
 };

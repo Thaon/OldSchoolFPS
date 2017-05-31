@@ -19,7 +19,7 @@ public:
 	{
 		glm::vec3 dir = glm::normalize(Parent->GetTransform().pos - cam->GetPos());
 		btVector3 btdir(dir.x, dir.y, dir.z);
-		Parent->Rigidbody->applyCentralForce(btdir * 60);
+		Parent->Rigidbody->applyCentralForce(btdir * 100);
 	}
 
 	virtual void Draw()
